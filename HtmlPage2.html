@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>文件打开</title>
+    
+</head>
+<body>
+    <h1>从本地中选择文件</h1><hr>
+    <!--预览本地图片-->
+    <input type="file" id="thefile" onchange="preview()"><hr>
+    <img src="" height="200"><hr>
+    <div id="result"></div>
+
+    <script>
+        function preview() {
+            var file = document.querySelector('input[type=file]').files[0];
+            var reader = new FileReader();
+            var tpye = file.type;
+            if (tpye == "text/plain") {
+                var preview = document.querySelector('#result');
+                reader.onloadend = function () {
+                    preview.innerHTML = reader.result;
+                };
+                if (file) {
+                    reader.readAsText(file, "gbk");  //csv txt
+                }
+            }
+            else {
+                var preview = document.querySelector('img');
+                reader.onloadend = function () {
+                    preview.src = reader.result;
+                }
+                if (file) {
+                    reader.readAsDataURL(file); //64为编码
+                } else {
+                    preview.src = "";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
