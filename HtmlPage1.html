@@ -21,16 +21,16 @@
     <p>请输入用户注册信息</p>
     <form>
         <div class="tit">
-            <p>用户名：<input type="text" name="account" placeholder="请输入用户名" pattern="[a-zA-Z].*" title="英文字母开头"/></p>
-            <p>密码：<input type="password" name="pwd" placeholder="请输入密码" pattern="[a-zA-Z0-9]{8,16}" title="包含英文和数字，8~16位"/></p>
-            <p>确认密码：<input type="password" name="pwd1" placeholder="请确认密码" pattern="[a-zA-Z0-9]{8,16}" title="包含英文和数字，8~16位"/></p>
-            <p>注册邮箱：<input type="email" name="mail" placeholder="请输入邮箱地址" pattern="\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}" title="正确的邮箱地址"/></p>
+            <p>用户名：<input type="text" name="account" placeholder="请输入用户名" pattern="[a-zA-Z].*" title="英文字母开头" required="required"/></p>
+            <p>密码：<input type="password" name="pwd" placeholder="请输入密码" pattern="[a-zA-Z0-9]{8,16}" title="包含英文和数字，8~16位" required="required"/></p>
+            <p>确认密码：<input type="password" name="pwd1" placeholder="请确认密码" pattern="[a-zA-Z0-9]{8,16}" title="包含英文和数字，8~16位" required="required" required="required"/></p>
+            <p>注册邮箱：<input type="email" name="mail" placeholder="请输入邮箱地址" pattern="\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}" title="正确的邮箱地址" required="required"/></p>
             <p>
-                性别：<label for="Sex_1" style="display:inline-block;width:58px;">男</label><input type="radio" name="sex" value="男" />
-                <label for="Sex_2" style="display:inline-block;width:57px;">女</label><input type="radio" name="sex" value="女" />
+                性别：<label for="Sex_1" style="display:inline-block;width:58px;">男</label><input type="radio" name="sex" value="男" required="required"/>
+                <label for="Sex_2" style="display:inline-block;width:57px;">女</label><input type="radio" name="sex" value="女" required="required"/>
             </p>
-            <p>学生证号：<input type="text" name="snum" placeholder="请输入学生证号" pattern="3(1|2)(15|16)[0-9]{6}" title="必须是15或16级的学生"/></p>
-            <p>手机号码：<input type="tel" name="tel_num" placeholder="请输入手机号码"pattern="0?(13|14|15|18)[0-9]{9}" title="手机11位"/></p>
+            <p>学生证号：<input type="text" name="snum" placeholder="请输入学生证号" pattern="3(1|2)(15|16)[0-9]{6}" title="必须是15或16级的学生" required="required"/></p>
+            <p>手机号码：<input type="tel" name="tel_num" placeholder="请输入手机号码"pattern="0?(13|14|15|18)[0-9]{9}" title="手机11位" required="required"/></p>
             <input type="submit" value="注册">
         </div>  
     </form>
